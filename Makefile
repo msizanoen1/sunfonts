@@ -1,6 +1,6 @@
 INSTALL_PATH ?= /opt/sunfonts
 
-DIRS = 100dpi 75dpi encodings F3bitmaps misc TrueType Type1
+DIRS = 100dpi 75dpi encodings F3bitmaps misc TrueType Type1 dtinfo
 
 install:
 	rm -rf $(INSTALL_PATH)
@@ -17,6 +17,7 @@ install:
 	ln -s $(INSTALL_PATH)/misc $(INSTALL_PATH)/fontpath.d/misc:scaled:pri=8
 	ln -s $(INSTALL_PATH)/75dpi $(INSTALL_PATH)/fontpath.d/75dpi:scaled:pri=9
 	ln -s $(INSTALL_PATH)/100dpi $(INSTALL_PATH)/fontpath.d/100dpi:scaled:pri=10
+	ln -s $(INSTALL_PATH)/dtinfo $(INSTALL_PATH)/fontpath.d/dtinfo:pri=11
 
 uninstall:
 	rm -rf $(INSTALL_PATH)
